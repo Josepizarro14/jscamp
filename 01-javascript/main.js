@@ -48,5 +48,6 @@ filterExperienceSelect.addEventListener('change', () => { applyFilters(filterExp
 */
 
 import './fetch-data.js';
-import './filters.js';  
+import './filters.js';
 import './apply-button.js';
+import './devjobs-avatar-element.js';
