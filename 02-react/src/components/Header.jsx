@@ -3,23 +3,29 @@ import React from 'react'
 function Header() {
     return (
         <header>
-            <nav>
-                <div className="logo">
-                    <h1>DevJobs</h1>
-                </div>
+            <h1>
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                DevJobs
+            </h1>
 
-                <ul>
-                    <li>
-                        <a href="#jobs">Trabajos</a>
-                    </li>
-                    <li>
-                        <a href="#about">Acerca</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contacto</a>
-                    </li>
-                </ul>
+            <nav>
+                <a href="">Empleos</a>
             </nav>
+
+            <div>
+                <devjobs-avatar service="google" username="google.com" size="32">
+                </devjobs-avatar>
+
+                <devjobs-avatar service="google" username="netflix.com" size="32">
+                </devjobs-avatar>
+
+                <devjobs-avatar service="google" username="vercel.com" size="32">
+                </devjobs-avatar>
+            </div>
         </header>
     )
 }

@@ -1,31 +1,20 @@
 
 import './App.css'
 
-import Footer from './components/Footer'
+import Footer from './components/Footer.jsx'
+import Header from './components/Header.jsx'
+import JobCard from './components/JobCard.jsx'
+
+import data from './data.json'
+
 
 function App() {
 
+
+
   return (
     <>
-      <header>
-        <h1>
-          <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <polyline points="16 18 22 12 16 6"></polyline>
-            <polyline points="8 6 2 12 8 18"></polyline>
-          </svg>
-          DevJobs
-        </h1>
-
-        <nav>
-          <a href="">Empleos</a>
-        </nav>
-
-        <div>
-
-        </div>
-      </header>
-
+      <Header />
       <main>
         <section className="jobs-search">
           <h1>Encuentra tu próximo trabajo</h1>
@@ -91,6 +80,10 @@ function App() {
 
           <div className="jobs-listings">
 
+            {data.map((job) => (
+              <JobCard key={job.id} job={job} />
+            ))}
+
           </div>
 
           <nav className="pagination">
@@ -112,7 +105,7 @@ function App() {
             </svg></a>
           </nav>
         </section>
-      </main>
+      </main >
 
       <Footer />
     </>
